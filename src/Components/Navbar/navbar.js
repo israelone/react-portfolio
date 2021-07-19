@@ -12,7 +12,13 @@ const Container = styled.nav`
 `;
 
 const Header = styled.h1`
-  padding-left: 15px;
+  margin: 0;
+  background-color: beige;
+  padding: 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: red;
+  }
 `;
 
 const NavigationList = styled.ul`

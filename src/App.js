@@ -1,12 +1,13 @@
 import './App.css';
 import About from './Components/About/about';
 import NavBar from './Components/Navbar/navbar';
-import Projects from './Projects/projects';
-import Contact from './Contact/contact';
+import Projects from './Components/Projects/projects';
+import Contact from './Components/Contact/contact';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Home from './Components/Home/home';
 import Skills from './Components/Skills/skills';
+import Footer from './Components/Footer/footer';
 
 const MenuButton = styled.button`
   &:hover {
@@ -39,8 +40,10 @@ const App = () => {
       />
       <NavBar showMenu={showMenu} />
       <Home />
-      <Skills />
+      {/* <Skills /> */}
+      <Projects />
       <Contact />
+      <Footer />
     </>
   );
 };

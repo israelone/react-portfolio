@@ -19,6 +19,7 @@ const Icon = styled.i`
   border-radius: 100%;
   margin: 20px;
 `;
+
 const Paragraph = styled.p`
   text-align: center;
 `;

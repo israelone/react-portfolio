@@ -3,13 +3,13 @@ import About from './Components/About/about';
 import NavBar from './Components/Navbar/navbar';
 import Projects from './Components/Projects/projects';
 import Contact from './Components/Contact/contact';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Home from './Components/Home/home';
 import Skills from './Components/Skills/skills';
 import Footer from './Components/Footer/footer';
 
-const MenuButton = styled.button`
+const Button = styled.button`
   &:hover {
     background-color: black;
   }
@@ -25,12 +25,26 @@ const MenuButton = styled.button`
   background-color: rgba(0, 0, 0, 0.28);
 `;
 
+const GoBackTopButton = styled(Button)`
+  position: fixed;
+  top: initial;
+  bottom: 20px;
+`;
+
+const MenuButton = styled(Button)``;
+
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
-
+  const [currentView, setCurrentView] = useState(0);
   const showMenuToggle = () => {
     setShowMenu(!showMenu);
   };
+
+  useEffect(() => {
+    window.addEventListener('scroll', (e) => {
+      setCurrentView(e.path[1].scrollY);
+    });
+  }, []);
 
   return (
     <>
@@ -38,6 +52,17 @@ const App = () => {
         onClick={() => showMenuToggle()}
         className={showMenu ? 'fas fa-times' : 'fas fa-bars'}
       />
+      {currentView != 0 && (
+        <GoBackTopButton
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            })
+          }
+          className="fas fa-chevron-up"
+        ></GoBackTopButton>
+      )}
       <NavBar showMenu={showMenu} />
       <Home />
       {/* <Skills /> */}

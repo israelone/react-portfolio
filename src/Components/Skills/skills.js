@@ -54,7 +54,7 @@ const Description = styled.p`
 
 const Skills = () => {
   return (
-    <Container>
+    <Container id="skills">
       <Header>Skills</Header>
       <SkillContainer>
         <IconContainer>

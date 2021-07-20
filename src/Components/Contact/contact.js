@@ -3,12 +3,9 @@ import styled from 'styled-components';
 
 const FormContainer = styled.div`
   width: 350px;
-
   height: -moz-fit-content;
-
   margin: 50px auto;
   border: 2px solid black;
-  margin-bottom: 10px;
 `;
 
 const FormHeader = styled.h2`
@@ -65,7 +62,7 @@ const Button = styled.button`
 
 const Contact = () => {
   return (
-    <FormContainer>
+    <FormContainer id="contact">
       <Form>
         <FormHeader>Contact Me</FormHeader>
         <Divider />

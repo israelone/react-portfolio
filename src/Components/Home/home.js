@@ -14,7 +14,7 @@ const Container = styled.div`
     #3e64ff calc(72% + 1px),
     #3e64ff 100%
   );
-  ${'' /* background-color: #c1c14b; */}
+
   height: 88vh;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ const Button = styled.button`
 
 const Home = () => {
   return (
-    <Container>
+    <Container id="home">
       <Header>Israel Lopez</Header>
       <Paragraph>Front End Developer</Paragraph>
       <Button>About Me</Button>

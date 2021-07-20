@@ -13,7 +13,7 @@ const Introduction = styled.p`
 
 const About = () => {
   return (
-    <Container>
+    <Container id="about">
       <Header>Hello!</Header>
       <Introduction>
         Lorem Ipsum passage, used since the 1500s "Lorem ipsum dolor sit amet,

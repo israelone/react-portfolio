@@ -3,22 +3,21 @@ import styled from 'styled-components';
 
 const Container = styled.nav`
   position: fixed;
-  background-color: #226969;
+  background-color: #094067;
   height: 100%;
   width: 225px;
   top: 0;
   right: ${(props) => (props.show ? '0' : '-225px')};
   transition: all ease 0.5s;
+  -webkit-box-shadow: -2px 0px 6px 0px #000000;
+  box-shadow: -2px 0px 6px 0px #000000;
 `;
 
 const Header = styled.h1`
   margin: 0;
-  background-color: beige;
+  background-color: #fffffe;
   padding: 15px;
   cursor: pointer;
-  &:hover {
-    background-color: red;
-  }
 `;
 
 const NavigationList = styled.ul`
@@ -29,7 +28,7 @@ const NavigationList = styled.ul`
 
 const NavigationItem = styled.li`
   &:hover {
-    background-color: #7ea07f;
+    background-color: #3da9fc;
   }
   padding: 18px 15px;
   color: white;

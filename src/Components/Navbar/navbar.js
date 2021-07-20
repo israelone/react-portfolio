@@ -26,13 +26,17 @@ const NavigationList = styled.ul`
   list-style: none;
 `;
 
+const NavigationLink = styled.a`
+  padding: 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+`;
+
 const NavigationItem = styled.li`
   &:hover {
     background-color: #3da9fc;
   }
-  padding: 18px 15px;
-  color: white;
-  cursor: pointer;
 `;
 
 const NavBar = (props) => {
@@ -40,11 +44,24 @@ const NavBar = (props) => {
     <Container show={props.showMenu}>
       <Header>Izzy Dev</Header>
       <NavigationList>
-        <NavigationItem>Home</NavigationItem>
-        <NavigationItem>About</NavigationItem>
-        <NavigationItem>Skils</NavigationItem>
-        <NavigationItem>Portfolio</NavigationItem>
-        <NavigationItem>Contact</NavigationItem>
+        <NavigationItem>
+          <NavigationLink href="#home">Home</NavigationLink>
+        </NavigationItem>
+        <NavigationItem>
+          <NavigationLink href="#about">About</NavigationLink>
+        </NavigationItem>
+        <NavigationItem>
+          <NavigationLink href="#skills">Skills</NavigationLink>
+        </NavigationItem>
+        <NavigationItem>
+          <NavigationLink>Resume</NavigationLink>
+        </NavigationItem>
+        <NavigationItem>
+          <NavigationLink href="#projects">Portfolio</NavigationLink>
+        </NavigationItem>
+        <NavigationItem>
+          <NavigationLink href="#contact">Contact</NavigationLink>
+        </NavigationItem>
       </NavigationList>
     </Container>
   );

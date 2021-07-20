@@ -49,6 +49,7 @@ const NavigationItem = styled.li`
 const NavigationLink = styled.a`
   cursor: pointer;
   text-decoration: underline;
+  color: black;
 `;
 
 const Footer = () => {
@@ -64,22 +65,22 @@ const Footer = () => {
       </IconsContainer>
       <NavigationList>
         <NavigationItem>
-          <NavigationLink>Home</NavigationLink>
+          <NavigationLink href="#home">Home</NavigationLink>
         </NavigationItem>
         <NavigationItem>
-          <NavigationLink>About</NavigationLink>
+          <NavigationLink href="#about">About</NavigationLink>
         </NavigationItem>
         <NavigationItem>
-          <NavigationLink>Skills</NavigationLink>
+          <NavigationLink href="#skills">Skills</NavigationLink>
         </NavigationItem>
         <NavigationItem>
           <NavigationLink>Resume</NavigationLink>
         </NavigationItem>
         <NavigationItem>
-          <NavigationLink>Portfolio</NavigationLink>
+          <NavigationLink href="#projects">Portfolio</NavigationLink>
         </NavigationItem>
         <NavigationItem>
-          <NavigationLink>Contact</NavigationLink>
+          <NavigationLink href="#contact">Contact</NavigationLink>
         </NavigationItem>
       </NavigationList>
       <Paragraph>Created By: Izzy</Paragraph>

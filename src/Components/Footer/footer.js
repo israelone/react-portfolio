@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 40px 0;
+  background-color: #3da9fc;
+`;
 
 const IconsContainer = styled.div`
   display: flex;
@@ -10,8 +13,13 @@ const IconsContainer = styled.div`
 `;
 
 const Icon = styled.i`
+  &:hover {
+    background-color: #fffffe;
+    color: #094067;
+  }
+  color: #fffffe;
   width: 60px;
-  background-color: blue;
+  background-color: #094067;
   height: 60px;
   text-align: center;
   font-size: 25px;
@@ -47,8 +55,12 @@ const Footer = () => {
   return (
     <Container>
       <IconsContainer>
-        <Icon className="fab fa-linkedin-in"></Icon>
-        <Icon className="fab fa-github"></Icon>
+        <a href="https://www.linkedin.com/in/israelone/" _blank="true">
+          <Icon className="fab fa-linkedin-in"> </Icon>
+        </a>
+        <a href="https://github.com/israelone">
+          <Icon className="fab fa-github"></Icon>
+        </a>
       </IconsContainer>
       <NavigationList>
         <NavigationItem>

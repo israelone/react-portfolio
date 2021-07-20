@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  background-color: blue;
+  background-color: #094067;
   display: flex;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@ const SkillContainer = styled.div`
   align-content: center;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 42px;
 `;
 
 const IconContainer = styled.div`
@@ -26,26 +26,25 @@ const IconContainer = styled.div`
   border-radius: 100%;
   background-color: white;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 `;
 
 const Icon = styled.i`
-  color: blue;
+  color: #094067;
   font-size: 25px;
 `;
 
 const Header = styled.h1`
   text-align: center;
   color: white;
+  letter-spacing: 5px;
 `;
 
 const SkillHeader = styled.h4`
+  font-size: 22px;
   color: white;
-  margin: 0;
+  margin: 10px 0;
 `;
 
 const Description = styled.p`
@@ -59,24 +58,39 @@ const Skills = () => {
       <Header>Skills</Header>
       <SkillContainer>
         <IconContainer>
-          <Icon className="fas fa-code"></Icon>
+          <Icon style={{ color: '#e96228' }} className="fab fa-html5"></Icon>
+          <Icon style={{ color: '#2287c2' }} className="fab fa-css3-alt"></Icon>
+          <Icon
+            style={{ color: '#f5d33c' }}
+            className="fab fa-js-square"
+          ></Icon>
         </IconContainer>
-        <SkillHeader>Technologies</SkillHeader>
-        <Description>Html, CSS, Javascript, React</Description>
+        <SkillHeader>Foundations</SkillHeader>
+        <Description>HTML5, CSS3, and Javascript</Description>
       </SkillContainer>
       <SkillContainer>
         <IconContainer>
-          <Icon className="fas fa-code"></Icon>
+          <Icon
+            style={{ color: '#5ed3f3', fontSize: '45px' }}
+            className="fab fa-react"
+          ></Icon>
         </IconContainer>
-        <SkillHeader>Technologies</SkillHeader>
-        <Description>Html, CSS, Javascript, React</Description>
+        <SkillHeader>Framework</SkillHeader>
+        <Description>React</Description>
       </SkillContainer>
       <SkillContainer>
         <IconContainer>
-          <Icon className="fas fa-code"></Icon>
+          <Icon
+            style={{ color: '#eb4c27', fontSize: '38px' }}
+            className="fab fa-git-alt"
+          ></Icon>
+          <Icon
+            style={{ color: '#302f2f', fontSize: '38px' }}
+            className="fab fa-github"
+          ></Icon>
         </IconContainer>
-        <SkillHeader>Technologies</SkillHeader>
-        <Description>Html, CSS, Javascript, React</Description>
+        <SkillHeader>Version Control</SkillHeader>
+        <Description>Git and Github</Description>
       </SkillContainer>
     </Container>
   );

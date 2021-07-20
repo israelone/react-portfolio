@@ -10,6 +10,7 @@ const ProjectContainer = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   padding: 20px;
+  background-color: #fffffe;
 `;
 
 const ProjectTitle = styled.h5`

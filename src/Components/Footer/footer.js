@@ -1,9 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from '../../resources/Logo/izzydevlogo.svg';
 
 const Container = styled.div`
   padding: 40px 0;
   background-color: #3da9fc;
+`;
+
+const Logo = styled.img`
+  width: 50px;
+  margin: 0 10px;
 `;
 
 const IconsContainer = styled.div`
@@ -30,6 +36,7 @@ const Icon = styled.i`
 
 const Paragraph = styled.p`
   text-align: center;
+  display: inline;
 `;
 
 const NavigationList = styled.ul`
@@ -50,6 +57,12 @@ const NavigationLink = styled.a`
   cursor: pointer;
   text-decoration: underline;
   color: black;
+`;
+
+const CreatedByContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
 `;
 
 const Footer = () => {
@@ -83,7 +96,10 @@ const Footer = () => {
           <NavigationLink href="#contact">Contact</NavigationLink>
         </NavigationItem>
       </NavigationList>
-      <Paragraph>Created By: Izzy</Paragraph>
+      <CreatedByContainer>
+        <Paragraph>Created By:</Paragraph>
+        <Logo src={Image} />
+      </CreatedByContainer>
     </Container>
   );
 };

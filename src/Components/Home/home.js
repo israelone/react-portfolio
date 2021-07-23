@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from '../../resources/Logo/izzydevlogo.svg';
 
 const Container = styled.div`
   font-size: 25px;
@@ -22,6 +23,14 @@ const Container = styled.div`
   align-content: space-around;
   justify-content: center;
   align-items: center;
+`;
+
+const Logo = styled.img`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 98px;
+  height: 87px;
 `;
 
 const Paragraph = styled.p`
@@ -51,6 +60,7 @@ const Button = styled.button`
 const Home = () => {
   return (
     <Container id="home">
+      <Logo src={Image} />
       <Header>Israel Lopez</Header>
       <Paragraph>Front End Developer</Paragraph>
       <Button>About Me</Button>

@@ -11,6 +11,17 @@ const ProjectContainer = styled.div`
   justify-content: flex-end;
   padding: 20px;
   background-color: #fffffe;
+
+  @media only screen and (min-width: 1000px) {
+    width: initial;
+    margin: 0;
+    height: 220px;
+    animation: scale-down-center 0.5s 1;
+    &:hover {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.8);
+    }
+  }
 `;
 
 const ProjectTitle = styled.h5`

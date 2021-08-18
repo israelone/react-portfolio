@@ -16,12 +16,15 @@ const ProjectsContainer = styled.div`
 
 const ProjectSection = styled.section`
   background-color: #3da9fc;
-  padding-top: 27px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 `;
 
 const Header = styled.h1`
   text-align: center;
   margin: 0;
+  color: white;
+  letter-spacing: 2px;
 `;
 
 const Projects = () => {
@@ -29,10 +32,10 @@ const Projects = () => {
     <ProjectSection>
       <Header>Projects</Header>
       <ProjectsContainer id="projects">
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+        <Project color="darkblue" />
+        <Project color="blue" />
+        <Project color="green" />
+        <Project color="darkgreen" />
       </ProjectsContainer>
     </ProjectSection>
   );

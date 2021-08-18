@@ -98,7 +98,7 @@ const Contact = () => {
 
           <InputContainer>
             <Label>Phone Number:</Label>
-            <Input placeholder={'(123)456-7890'} type={'number'}></Input>
+            <Input placeholder={'(123)456-7890'} type={'tel'}></Input>
           </InputContainer>
 
           <InputContainer>

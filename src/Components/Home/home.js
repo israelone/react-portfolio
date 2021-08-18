@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from '../../resources/Logo/izzydevlogo.svg';
 
-const Container = styled.div`
+const Container = styled.section`
   font-size: 25px;
   background: linear-gradient(
     125deg,
@@ -16,7 +16,7 @@ const Container = styled.div`
     #3e64ff 100%
   );
 
-  height: 88vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;

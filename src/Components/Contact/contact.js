@@ -10,7 +10,6 @@ const FormContainer = styled.div`
   width: 350px;
   height: -moz-fit-content;
   margin: 50px auto;
-  border: 2px solid black;
   background-color: white;
   color: #094067;
   border-radius: 10px;
@@ -21,7 +20,7 @@ const FormHeader = styled.h2`
   letter-spacing: 5px;
 `;
 
-const InputContainer = styled.i`
+const InputContainer = styled.div`
   background-color: white;
   border-radius: 5px;
   margin: 10px 0;
@@ -32,14 +31,13 @@ const Input = styled.input`
   &:focus {
     outline: none;
   }
-
   font-size: 20px;
   padding: 10px;
 `;
 
 const Label = styled.label`
   font-size: 14px;
-  margin: 5px 0px;
+  padding: 5px 0px;
   font-weight: bold;
 `;
 
@@ -81,7 +79,7 @@ const Contact = () => {
           <InputContainer>
             <Label>Name:</Label>
             <Input
-              placeholder={'John Doe'}
+              placeholder={'Your Name'}
               required={true}
               type={'text'}
             ></Input>

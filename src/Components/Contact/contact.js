@@ -32,12 +32,9 @@ const Input = styled.input`
   &:focus {
     outline: none;
   }
-  border: none;
-  border-bottom: 1px solid black;
-  width: 98%;
+
   font-size: 20px;
-  padding: 0;
-  padding-left: 5px;
+  padding: 10px;
 `;
 
 const Label = styled.label`

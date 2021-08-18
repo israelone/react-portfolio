@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: #fffffe;
   padding: 80px 20px;
+  @media only screen and (min-width: 1000px) {
+    padding: 100px 260px;
+  }
 `;
 
 const Header = styled.h1``;

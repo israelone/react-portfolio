@@ -40,6 +40,7 @@ const Input = styled.input`
 const Label = styled.label`
   font-size: 14px;
   margin: 5px 0px;
+  font-weight: bold;
 `;
 
 const Form = styled.form`

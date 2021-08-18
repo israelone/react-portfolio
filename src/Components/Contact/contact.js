@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Container = styled.section`
+  padding: 50px 0;
+  background-color: #f2f3f9;
+`;
+
 const FormContainer = styled.div`
   width: 350px;
   height: -moz-fit-content;
@@ -62,36 +67,42 @@ const Button = styled.button`
 
 const Contact = () => {
   return (
-    <FormContainer id="contact">
-      <Form>
-        <FormHeader>Contact Me</FormHeader>
-        <Divider />
-        <InputContainer>
-          <Label>Name:</Label>
-          <Input placeholder={'John Doe'} required={true} type={'text'}></Input>
-        </InputContainer>
+    <Container>
+      <FormContainer id="contact">
+        <Form>
+          <FormHeader>Contact Me</FormHeader>
+          <Divider />
+          <InputContainer>
+            <Label>Name:</Label>
+            <Input
+              placeholder={'John Doe'}
+              required={true}
+              type={'text'}
+            ></Input>
+          </InputContainer>
 
-        <InputContainer>
-          <Label>Email:</Label>
-          <Input
-            placeholder={'name@domain.com'}
-            required={true}
-            type={'text'}
-          ></Input>
-        </InputContainer>
+          <InputContainer>
+            <Label>Email:</Label>
+            <Input
+              placeholder={'name@domain.com'}
+              required={true}
+              type={'text'}
+            ></Input>
+          </InputContainer>
 
-        <InputContainer>
-          <Label>Phone Number:</Label>
-          <Input placeholder={'(123)456-7890'} type={'number'}></Input>
-        </InputContainer>
+          <InputContainer>
+            <Label>Phone Number:</Label>
+            <Input placeholder={'(123)456-7890'} type={'number'}></Input>
+          </InputContainer>
 
-        <InputContainer>
-          <Label>Message:</Label>
-          <TextArea />
-        </InputContainer>
-        <Button>Submit</Button>
-      </Form>
-    </FormContainer>
+          <InputContainer>
+            <Label>Message:</Label>
+            <TextArea />
+          </InputContainer>
+          <Button>Submit</Button>
+        </Form>
+      </FormContainer>
+    </Container>
   );
 };
 export default Contact;

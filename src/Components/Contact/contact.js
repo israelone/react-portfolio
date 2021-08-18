@@ -21,10 +21,6 @@ const FormHeader = styled.h2`
   letter-spacing: 5px;
 `;
 
-const Divider = styled.hr`
-  width: 70%;
-`;
-
 const InputContainer = styled.i`
   background-color: white;
   border-radius: 5px;
@@ -74,7 +70,6 @@ const Contact = () => {
       <FormContainer id="contact">
         <Form>
           <FormHeader>Contact Me</FormHeader>
-          <Divider />
           <InputContainer>
             <Label>Name:</Label>
             <Input

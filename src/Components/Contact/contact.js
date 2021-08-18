@@ -51,7 +51,7 @@ const Form = styled.form`
 `;
 
 const TextArea = styled.textarea`
-  width: 273px;
+  width: 98%;
   height: 134px;
 `;
 

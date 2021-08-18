@@ -56,10 +56,20 @@ const TextArea = styled.textarea`
 `;
 
 const Button = styled.button`
+  width: 98%;
   display: block;
   margin: 10px auto;
-  width: 60px;
-  height: 25px;
+  height: 40px;
+  -webkit-box-shadow: 0px 11px 16px -12px #000000;
+  box-shadow: 0px 11px 16px -12px #000000;
+  background-color: #094067;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 4px;
+  cursor: pointer;
 `;
 
 const Contact = () => {

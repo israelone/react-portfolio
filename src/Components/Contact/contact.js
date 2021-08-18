@@ -11,6 +11,9 @@ const FormContainer = styled.div`
   height: -moz-fit-content;
   margin: 50px auto;
   border: 2px solid black;
+  background-color: white;
+  color: #094067;
+  border-radius: 10px;
 `;
 
 const FormHeader = styled.h2`

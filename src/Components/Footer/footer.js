@@ -37,6 +37,8 @@ const Icon = styled.i`
 const Paragraph = styled.p`
   text-align: center;
   display: inline;
+  color: white;
+  font-weight: 500;
 `;
 
 const NavigationList = styled.ul`

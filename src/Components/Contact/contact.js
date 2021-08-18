@@ -47,6 +47,7 @@ const Form = styled.form`
   display: grid;
   width: 300px;
   margin: 0 auto;
+  padding: 10px;
 `;
 
 const TextArea = styled.textarea`

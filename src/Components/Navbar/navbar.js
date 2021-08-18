@@ -18,6 +18,7 @@ const Header = styled.h1`
   background-color: #fffffe;
   padding: 15px;
   cursor: pointer;
+  color: #094067;
 `;
 
 const NavigationList = styled.ul`

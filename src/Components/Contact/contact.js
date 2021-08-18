@@ -24,7 +24,6 @@ const FormHeader = styled.h2`
 const InputContainer = styled.i`
   background-color: white;
   border-radius: 5px;
-  padding-left: 10px;
   margin: 10px 0;
   display: grid;
 `;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from '../../resources/Logo/izzydevlogo.svg';
 
-const Container = styled.div`
+const Container = styled.footer`
   padding: 40px 0;
   background-color: #3da9fc;
 `;
@@ -50,7 +50,7 @@ const NavigationList = styled.ul`
 `;
 
 const NavigationItem = styled.li`
-  margin: 0 10px;
+  margin: 0 7px;
   display: inline;
 `;
 const NavigationLink = styled.a`

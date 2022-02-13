@@ -1,16 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import Project from './Project/project';
+import React from "react";
+import styled from "styled-components";
+import Project from "./Project/project";
+import "./projects.css";
 
 const ProjectsContainer = styled.div`
   background-color: #3da9fc;
   padding: 10px 0;
+  gap: 58px;
   @media only screen and (min-width: 1000px) {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(2, auto);
-    width: 80%;
-    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
   }
 `;
 
@@ -32,10 +33,13 @@ const Projects = () => {
     <ProjectSection>
       <Header>Projects</Header>
       <ProjectsContainer id="projects">
-        <Project color="darkblue" />
-        <Project color="blue" />
-        <Project color="green" />
-        <Project color="darkgreen" />
+        <Project
+          projectImage="resources/projectImages/e-commerce.png"
+          color="darkblue"
+        />
+        {/* <Project projectImage="resources/projectImages/e-commerce.png" color="blue" />
+        <Project projectImage="resources/projectImages/e-commerce.png" color="green" />
+        <Project projectImage="resources/projectImages/e-commerce.png" color="darkgreen" /> */}
       </ProjectsContainer>
     </ProjectSection>
   );

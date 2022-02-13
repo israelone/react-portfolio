@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.section`
   padding: 10px 0 10px 0;
@@ -25,8 +25,8 @@ const SkillContainer = styled.div`
 `;
 
 const IconContainer = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 100%;
   background-color: white;
   display: flex;
@@ -70,15 +70,16 @@ const Skills = () => {
       <SkillsContainer>
         <SkillContainer>
           <IconContainer>
-            <Icon style={{ color: '#e96228' }} className="fab fa-html5"></Icon>
+            <Icon style={{ color: "#e96228" }} className="fab fa-html5"></Icon>
             <Icon
-              style={{ color: '#2287c2' }}
+              style={{ color: "#2287c2" }}
               className="fab fa-css3-alt"
             ></Icon>
             <Icon
-              style={{ color: '#f5d33c' }}
+              style={{ color: "#f5d33c" }}
               className="fab fa-js-square"
             ></Icon>
+            <Icon style={{ color: "#CF649A" }} className="fab fa-sass"></Icon>
           </IconContainer>
           <SkillHeader>Foundations</SkillHeader>
           <Description>HTML5, CSS3, and Javascript</Description>
@@ -86,8 +87,12 @@ const Skills = () => {
         <SkillContainer>
           <IconContainer>
             <Icon
-              style={{ color: '#5ed3f3', fontSize: '45px' }}
+              style={{ color: "#5ed3f3", fontSize: "45px" }}
               className="fab fa-react"
+            ></Icon>{" "}
+            <Icon
+              style={{ color: "#C3002F", fontSize: "45px" }}
+              className="fab fa-angular"
             ></Icon>
           </IconContainer>
           <SkillHeader>Framework</SkillHeader>
@@ -96,12 +101,16 @@ const Skills = () => {
         <SkillContainer>
           <IconContainer>
             <Icon
-              style={{ color: '#eb4c27', fontSize: '38px' }}
+              style={{ color: "#eb4c27", fontSize: "38px" }}
               className="fab fa-git-alt"
             ></Icon>
             <Icon
-              style={{ color: '#302f2f', fontSize: '38px' }}
+              style={{ color: "#302f2f", fontSize: "38px" }}
               className="fab fa-github"
+            ></Icon>
+            <Icon
+              style={{ color: "#FE641B", fontSize: "38px" }}
+              className="fab fa-gitlab"
             ></Icon>
           </IconContainer>
           <SkillHeader>Version Control</SkillHeader>

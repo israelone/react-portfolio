@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "../../../resources/projectsImages/e-commerce.jpg";
+import Image from "../../../resources/projectsImages/e-commerce.png";
 
 const ProjectTitle = styled.h5`
   margin: 0;

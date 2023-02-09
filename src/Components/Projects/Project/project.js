@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "../../../resources/projectsImages/e-commerce.png";
 
 const ProjectTitle = styled.h5`
   margin: 0;
@@ -20,7 +19,6 @@ const ProjectSummary = styled.p`
 `;
 
 const BackgroundImage = styled.img`
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -28,27 +26,14 @@ const BackgroundImage = styled.img`
   height: 220px;
 `;
 const ProjectContainer = styled.div`
-padding: 0 10px;
+
 position: relative;
   background-position:center;
   background-size:100%;
   color: white;
-  width: 80%;
-  height: 300px;
-  margin: 20px auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  background-color: ${(props) =>
-    props.backgroundcolor === "darkblue"
-      ? "#2b8cb0"
-      : props.backgroundcolor === "blue"
-      ? "#4c61fc"
-      : props.backgroundcolor === "green"
-      ? "#3dfc7b"
-      : "#2bb056"};
-
- 
+  justify-content: flex-end; 
   @media only screen and (min-width: 1000px) {
     width: initial;
     margin: 0;
@@ -70,20 +55,45 @@ position: relative;
   }
 `;
 
+const Icon = styled.i`
+  &:hover {
+    color: #094067;
+  }
+  color: #fffffe;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 100%;
+`;
+
+const GithubLink = styled.div``;
+
+const ProjectLinksContainer = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-top: 5px;
+  align-items: center;
+`;
+const ProjectTools = styled.div``;
+
 const Project = (props) => {
-  console.log(props.projectImage);
   return (
     <ProjectContainer className="project-tile" backgroundcolor={props.color}>
-      <BackgroundImage src={Image} alt="" />
-      <ProjectTitle>
-        <a href="#" target="_blank">
-          E-Commerce
-        </a>{" "}
-        <a href="https://github.com/israelone/e-commerce" target="_blank">
-          Github
-        </a>
-      </ProjectTitle>
-      <ProjectSummary>E-Commerce page created using AngularJs</ProjectSummary>
+      <BackgroundImage src={props.projectImage} alt="" />
+      <ProjectLinksContainer>
+        <ProjectTitle>
+          <a href={props.url} target="_blank" rel="noreferrer">
+            {props.projectTitle}
+          </a>
+        </ProjectTitle>
+        <GithubLink>
+          <a href={props.githubUrl} target="_blank" rel="noreferrer">
+            <Icon className="fab fa-github"></Icon>
+          </a>
+        </GithubLink>
+      </ProjectLinksContainer>
+      <ProjectTools></ProjectTools>
     </ProjectContainer>
   );
 };

@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Project from "./Project/project";
+import ECommerceImage from "../../images/projectsImages/e-commerce.png";
+import RESTCountries from "../../images/projectsImages/rest-countries.png";
 
 const ProjectsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   background-color: #3da9fc;
-  padding: 10px 0;
-  gap: 58px;
+  gap: 28px;
   @media only screen and (min-width: 1000px) {
-    display: flex;
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
@@ -16,13 +19,12 @@ const ProjectsContainer = styled.div`
 
 const ProjectSection = styled.section`
   background-color: #3da9fc;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 15px;
 `;
 
 const Header = styled.h1`
-  text-align: center;
-  margin: 0;
+  font-size: 45px;
+
   color: white;
   letter-spacing: 2px;
 `;
@@ -33,11 +35,20 @@ const Projects = () => {
       <Header>Projects</Header>
       <ProjectsContainer id="projects">
         <Project
-          projectImage="resources/projectImages/e-commerce.png"
+          projectImage={ECommerceImage}
+          url="https://israelone.github.io/e-commerce/"
+          githubUrl="https://github.com/israelone/e-commerce"
+          projectTitle="E-Commerce"
           color="darkblue"
         />
-        {/* <Project projectImage="resources/projectImages/e-commerce.png" color="blue" />
-        <Project projectImage="resources/projectImages/e-commerce.png" color="green" />
+        <Project
+          projectImage={RESTCountries}
+          url="https://israelone.github.io/REST-countries/"
+          githubUrl="https://github.com/israelone/REST-countries"
+          projectTitle="Countries REST API"
+          color="blue"
+        />
+        {/* <Project projectImage="resources/projectImages/e-commerce.png" color="green" />
         <Project projectImage="resources/projectImages/e-commerce.png" color="darkgreen" /> */}
       </ProjectsContainer>
     </ProjectSection>

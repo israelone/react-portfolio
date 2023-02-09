@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Image from '../../resources/Logo/izzydevlogo.svg';
+import React from "react";
+import styled from "styled-components";
+import Image from "../../images/Logo/izzydevlogo.svg";
 
 const Container = styled.footer`
   padding: 40px 0;

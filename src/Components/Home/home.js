@@ -4,26 +4,31 @@ import Profile from "../About/ProfilePicture/profilePicture";
 
 const Container = styled.section`
   font-size: 25px;
-  background-color: #151515;
+  background-color: #f0f2f5;
   height: 100vh;
-  display: -ms-flexbox;
-  display: flex;
-  align-content: space-around;
-  justify-content: center;
-  align-items: center;
-  padding: 0 69px;
-  flex-direction: column;
+  padding: 0 39px;
   @media only screen and (min-width: 1000px) {
     font-size: 25px;
-    background-color: #151515;
+    background-color: #f0f2f5;
     height: 100vh;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: space-around;
-    justify-content: center;
-    align-items: center;
     padding: 0 280px;
   }
+`;
+// display: flex;
+// align-content: space-around;
+// justify-content: center;
+// align-items: center;
+// flex-direction: column;
+// flex-direction: row;
+// flex-wrap: nowrap;
+// align-content: space-around;
+// justify-content: center;
+// align-items: center;
+
+const NavigationButtons = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 `;
 
 const Logo = styled.img`
@@ -47,7 +52,7 @@ const Introduction = styled.p`
   margin: 0;
   letter-spacing: 7px;
   font-family: "Teko", sans-serif;
-  color: white;
+  text-align: center;
   font-size: 40px;
   span {
     text-decoration: underline;
@@ -67,37 +72,124 @@ const LinkedinLink = styled.a`
   align-items: flex-end;
   gap: 10px;
   cursor: pointer;
-
   text-decoration: none;
-
   span {
     color: #094067;
   }
 `;
 
-const Icon = styled.i``;
+const IconsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+`;
+
+const Icon = styled.i`
+  color: white;
+`;
+
+const LinkedIcon = styled(Icon)`
+  color: #094067;
+`;
+
+const NavBar = styled.nav`
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const NavLinksList = styled.ul`
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 15px 0;
+`;
+
+const NavLink = styled.li`
+  padding: 0 10px;
+  font-size: 18px;
+`;
+
+const ContactButton = styled.button`
+  background: black;
+  color: white;
+  border-radius: 40px;
+  border: none;
+  padding: 10px 18px;
+`;
+
+const IntroContainer = styled.div`
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Button = styled.button`
+  border-radius: 40px;
+  border: none;
+  padding: 10px 18px;
+`;
+
+const GrayOnBlackButton = styled(Button)`
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 15px 30px;
+`;
+
+const BlackOnWhiteButton = styled(Button)`
+  background: black;
+  color: white;
+  padding: 15px 30px;
+`;
 
 const Home = () => {
   return (
     <Container id="home">
-      <div>
+      <NavBar>
+        <Logo></Logo>
+        <NavLinksList>
+          <NavLink>Home</NavLink>
+          <NavLink>Services</NavLink>
+          <NavLink>About</NavLink>
+        </NavLinksList>
+        <div>
+          <BlackOnWhiteButton>LET'S TALK</BlackOnWhiteButton>
+        </div>
+      </NavBar>
+      {/* <div>
+        <span>israelopez</span>
+        <IconsContainer>
+          <a href="https://www.linkedin.com/in/israelone/" _blank="true">
+            <Icon className="fab fa-linkedin-in"> </Icon>
+          </a>
+          <a href="https://github.com/israelone">
+            <Icon className="fab fa-github"></Icon>
+          </a>
+        </IconsContainer>
+      </div> */}
+      <IntroContainer>
         <Profile />
         <Introduction>
-          Hello, <br /> I'm <span>Israel Lopez</span>
+          Hello, I'm <span>Israel Lopez,</span> <br></br>creative Software
+          Engineer based on the USA.
         </Introduction>
-        <Description>
-          A Frontend focused Web Developer building the Frontend of Websites and
-          Web Applications
-        </Description>
-      </div>
-      <LinkedinLink
+        <p>A Software Engineer specialized in Front End technologies.</p>
+      </IntroContainer>
+      <NavigationButtons>
+        <BlackOnWhiteButton>GET IN TOUCH</BlackOnWhiteButton>
+        <GrayOnBlackButton>VIEW PROJECTS</GrayOnBlackButton>
+      </NavigationButtons>
+      {/* <LinkedinLink
         href="https://www.linkedin.com/in/israelone/"
         target="_blank"
         rel="noreferrer"
       >
         <span>Connect On </span>
-        <Icon className="fab fa-linkedin"></Icon>
-      </LinkedinLink>
+        <LinkedIcon className="fab fa-linkedin"></LinkedIcon>
+      </LinkedinLink> */}
     </Container>
   );
 };

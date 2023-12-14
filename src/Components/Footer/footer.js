@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "../../images/Logo/izzydevlogo.svg";
+// import Image from "../../images/Logo/izzydevlogo.svg";
 
 const Container = styled.footer`
-  padding: 40px 0;
-  background-color: #3da9fc;
+  padding: 124px;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Logo = styled.img`
@@ -14,7 +16,7 @@ const Logo = styled.img`
 
 const IconsContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: row;
 `;
 
@@ -24,12 +26,12 @@ const Icon = styled.i`
     color: #094067;
   }
   color: #fffffe;
-  width: 60px;
+  width: 40px;
   background-color: #094067;
-  height: 60px;
+  height: 40px;
   text-align: center;
-  font-size: 25px;
-  line-height: 60px;
+  font-size: 20px;
+  line-height: 40px;
   border-radius: 100%;
   margin: 20px;
 `;
@@ -57,7 +59,7 @@ const NavigationItem = styled.li`
 `;
 const NavigationLink = styled.a`
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   color: black;
 `;
 
@@ -67,42 +69,42 @@ const CreatedByContainer = styled.div`
   margin: 10px 0;
 `;
 
+const NagivationContainer = styled.div``;
+
 const Footer = () => {
   return (
-    <Container>
-      <IconsContainer>
-        <a href="https://www.linkedin.com/in/israelone/" _blank="true">
-          <Icon className="fab fa-linkedin-in"> </Icon>
-        </a>
-        <a href="https://github.com/israelone">
-          <Icon className="fab fa-github"></Icon>
-        </a>
-      </IconsContainer>
-      <NavigationList>
-        <NavigationItem>
-          <NavigationLink href="#home">Home</NavigationLink>
-        </NavigationItem>
-        <NavigationItem>
-          <NavigationLink href="#about">About</NavigationLink>
-        </NavigationItem>
-        <NavigationItem>
-          <NavigationLink href="#skills">Skills</NavigationLink>
-        </NavigationItem>
-        <NavigationItem>
-          <NavigationLink>Resume</NavigationLink>
-        </NavigationItem>
-        <NavigationItem>
-          <NavigationLink href="#projects">Portfolio</NavigationLink>
-        </NavigationItem>
-        <NavigationItem>
-          <NavigationLink href="#contact">Contact</NavigationLink>
-        </NavigationItem>
-      </NavigationList>
-      <CreatedByContainer>
-        <Paragraph>Created By:</Paragraph>
-        <Logo src={Image} />
-      </CreatedByContainer>
-    </Container>
+    <>
+      <Container>
+        <CreatedByContainer>
+          <Paragraph>Created By:</Paragraph>
+          {/* <Logo src={Image} /> */}
+        </CreatedByContainer>
+        <NagivationContainer>
+          <NavigationList>
+            <NavigationItem>
+              <NavigationLink href="#home">Home</NavigationLink>
+            </NavigationItem>
+            <NavigationItem>
+              <NavigationLink href="#about">About Us</NavigationLink>
+            </NavigationItem>
+            <NavigationItem>
+              <NavigationLink href="#projects">Portfolio</NavigationLink>
+            </NavigationItem>
+            <NavigationItem>
+              <NavigationLink href="#contact">Contact</NavigationLink>
+            </NavigationItem>
+          </NavigationList>
+          <IconsContainer>
+            <a href="https://www.linkedin.com/in/israelone/" _blank="true">
+              <Icon className="fab fa-linkedin-in"> </Icon>
+            </a>
+            <a href="https://github.com/israelone">
+              <Icon className="fab fa-github"></Icon>
+            </a>
+          </IconsContainer>
+        </NagivationContainer>
+      </Container>
+    </>
   );
 };
 

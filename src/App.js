@@ -29,6 +29,17 @@ const GoBackTopButton = styled(Button)`
   top: initial;
   bottom: 20px;
 `;
+const HorizontalLine = styled.hr`
+  border: none;
+  height: 1px;
+  margin: 0;
+  background-color: #434343;
+`;
+
+const HorizontalLineContainer = styled.div`
+  padding: 0 124px;
+  background-color: #f0f2f5;
+`;
 
 const App = () => {
   const [currentView, setCurrentView] = useState(0);
@@ -68,6 +79,9 @@ const App = () => {
       <About />
       <Projects />
       <Contact />
+      <HorizontalLineContainer>
+        <HorizontalLine></HorizontalLine>
+      </HorizontalLineContainer>
       <Footer />
     </>
   );

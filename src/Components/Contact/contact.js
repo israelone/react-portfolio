@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.section`
   padding: 50px 0;
-  background-color: #f2f3f9;
+  background-color: #f0f2f5;
 `;
 
 const FormContainer = styled.div`
@@ -11,7 +11,6 @@ const FormContainer = styled.div`
   height: -moz-fit-content;
   margin: 50px auto;
   background-color: white;
-  color: #094067;
   border-radius: 10px;
 `;
 
@@ -21,7 +20,6 @@ const FormHeader = styled.h2`
 `;
 
 const InputContainer = styled.div`
-  background-color: white;
   border-radius: 5px;
   margin: 10px 0;
   display: grid;
@@ -79,26 +77,23 @@ const Contact = () => {
           <InputContainer>
             <Label>Name:</Label>
             <Input
-              placeholder={'Your Name'}
+              placeholder={"First Name Last Name"}
               required={true}
-              type={'text'}
+              type={"text"}
             ></Input>
           </InputContainer>
-
           <InputContainer>
             <Label>Email:</Label>
             <Input
-              placeholder={'name@domain.com'}
+              placeholder={"name@domain.com"}
               required={true}
-              type={'text'}
+              type={"text"}
             ></Input>
           </InputContainer>
-
           <InputContainer>
             <Label>Phone Number:</Label>
-            <Input placeholder={'(123)456-7890'} type={'tel'}></Input>
+            <Input placeholder={"(123)456-7890"} type={"tel"}></Input>
           </InputContainer>
-
           <InputContainer>
             <Label>Message:</Label>
             <TextArea />

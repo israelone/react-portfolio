@@ -3,9 +3,10 @@ import picture from "../../../images/ProfilePicture/profilebnw.png";
 import styled from "styled-components";
 
 const Picture = styled.img`
-  width: 100%;
+  width: 180px;
   height: 14%;
-  margin: auto;
+  margin: 20px auto;
+  border-radius: 100%;
 `;
 
 const Introduction = styled.p``;
